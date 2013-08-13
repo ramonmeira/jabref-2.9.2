@@ -1283,6 +1283,7 @@ public JabRefPreferences prefs() {
       //edit.add(exportToClipboard);
       edit.addSeparator();
       edit.add(mark);
+      edit.add(new MarkEntriesAction(this, Util.MAX_MARKING_LEVEL-1).getMenuItem());
       JMenu markSpecific = subMenu("Mark specific color");
       for (int i=0; i<Util.MAX_MARKING_LEVEL; i++)
           markSpecific.add(new MarkEntriesAction(this, i).getMenuItem());
